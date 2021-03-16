@@ -71,6 +71,39 @@ class Header extends Component {
                 }
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                activeStyle={{ fontWeight: "bold" }}
+                className="nav-link"
+                to="/lifecycle"
+              >
+                Lifecycle{" "}
+                {
+                  (this.props.location.pathname,
+                  "/register" && <span className="sr-only">(current)</span>)
+                }
+              </NavLink>
+            </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownId"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <div className="dropdown-menu" aria-labelledby="dropdownId">
+                <Link className="dropdown-item" to="/usestatedemo">
+                  Use state demo
+                </Link>
+                <Link className="dropdown-item" to="/baitapchonxe">
+                  Bài tập chọn xe
+                </Link>
+              </div>
+            </li>
           </ul>
         </div>
       </nav>
